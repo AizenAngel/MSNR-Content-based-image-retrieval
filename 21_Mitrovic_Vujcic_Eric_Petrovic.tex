@@ -1,0 +1,40 @@
+ \documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+
+\title{Pretraživanje slika po sadržaju\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+
+\author{ Božidar Mitrović, Luka Vujcić, \\ Marija Erić, Dušan Petrović }
+
+\date{Novembar 2021}
+
+
+\begin{document}
+
+\maketitle
+
+\abstract{
+Multimedijalna analiza sadržaja se primenjuje u različitim problemima kompjuterske vizije, a digitalne slike čine veliki deo multimedijalnog sadržaja. U poslednjim godinama, kompleksnost multimedijalnih sadržaja (posebno slika) je eksponencijalno porasla. Više od milion slika dnevno dolazi do platformi poput Fejsbuka, Tvitera i Instagrama. Efikasan pronalazak određene slike iz ovako brojne arhive je netrivijalan zadatak u oblasti kompjuterske vizije. \\ Tradicionalni pretraživači koje svakodnevno koristimo baziraju svoju pretragu na pretraživanju natpisa koji prati sliku. Međutim, ogroman napredak je napravljen na polju pretrage slika po sadržaju (\textit{PSPS}), klasifikaciji slika i njihovoj analizi. Glavna odlika PSPS modela i klasifikacije slika je u tome što su slike visoke rezolucije mapirane u numeričke vektore. Istraživanja su pokazala da postoji velika razlika između ovih vektora i ljudskg smisla semantike u slici, te im je cilj da se ova razlika što je moguće više smanji. \\ Ovim seminarskim radom pravimo pregled trenutnih tehnika u PSPS istraživanju i predstavljanju slika. Proćićemo različite aspekte istraživanja i nadamo se novom proboju na polju ovih tehnika i poboljšanju performansi trenutnih.} 
+
+\tableofcontents
+\newpage
+\section{Uvod}
+
+Napretkom tehnologije, korišćenje mobilnih telefona, digitalnih kamera interneta postaje dosta jendostavnije. Zbog toga raste i količina multimedijalnih sadržaja kojeg oni proizvode. Samim tim, tehnike koje omogućavaju efikasno pretraživanje i upoređivanje slika postaju zahtevan problem. Internet pretraživači koje svakodnevno koristimo se služe opisom koji stoji uz slike. Dakle, oni rade poređenje reči i određivanje sličnoti između njih. Ovaj pristup možemo odmah da otpišemo jer je gotovo nemoguće manuelno opisati slike koje imamo a čak i tada naši pretraživači znaju da pogreše. Treba nam nešto drugačije. \\
+Jedan pristup pri ovakoj analizi je da se najpre primeni nekakav automatski sistem za anotaciju slika koji ume da opiše sadržaj slike, te da se na osnovu njega vrši opis slika. Ovde bi glavni model zavisio od sposobnosti sistema za anotaciju da precizno odredi ivice, boju, teksturu i druge elemente slike što uopšte nije lak zadatak nekad čak i za ljude. A pošto naš glavni model dosta zavisi od ovih anotacija, tolerancije za grešku su izuzetno male.\\
+Pretraživanje slika po sadržaju (PSPS) je tehnika pomoću koja prevazilazi gorepomenute probleme, jer se radi vizuelna analiza slike koja se pretražuje. Dakle, glavni uslov za rad ovakvih modela je da postoji slika za koju se radi pretraga, a pomoću nje se određuje sličnost sa slikama koje se nalaze u arhivi. Boja, oblici, tekstura i ostali elementi niskog nivoa slike za pretragu se koriste tek na kraju za sortiranje izlaza. PSPS modeli su našli primenu u medici, otkrivanju kriminala, analizi video snimaka, vojsci i mnogim drugim delatnostima. \\
+Jedna od glavnih odlika za uspešnost modela za preuzimanje slika je minimalna ljudska interakcija. Vizuelne karakteristike koje će biti korišćene za sortiranje slike (boja, tekstura, oblici) zavise od potreba korisnika koji koristi sistem. Međutim, da bi karakteristike učinili robusnijim i jedinstvenijim, obično su komputacijske cene nezanemarljive. Takođe, izborom pogrešnih osobina na slici  možemo dodatno usporiti ili otežati proces učenja, što takođe nije dobro. Dakle, neki od glavnih zadataka istraživanja na ovu temu podrazumevaju: 
+\begin{enumerate}
+\item kako se performanse modela za pretraživanje slika po sadržaju mogu poboljšati korišćenjem osobina niskog nivoa slike 
+\item kako se semantička razlika između osobina niskog nivoa i semantičkih osobina visokog nivoa slike može smanjiti
+\item kako tehnike mašinskog učenja mogu poboljšati performanse (PSPS) modela
+\end{enumerate}
+
+\end{document}
