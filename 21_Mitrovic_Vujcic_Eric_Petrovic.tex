@@ -55,7 +55,7 @@ Opšti vizuelni sadržaj(odlike niskog nivoa) obuhvata boju, teksturu itd., dok 
 Semantički sadržaj se dobija iz tekstualnih anotacija ili kompleksnih procedura zaključivanja na osnovu vizuelnog sadržaja \cite{long2003fundamentals}.
 
 \section{Odlike niskog nivoa}
-Izdvajanje odlika niskog nivoa pretstavlja osnovu PSPS sistema. Izdvajanje se moze izvrsiti sa cele slike ili sa nekog regiona slike. Predstavljanje slika na nivou regiona je sličnije ljudskom sistemu za opažanje i samim tim više PSPS sitema koristi taj pristup. Da bi se izvršila pretraga slika zasnovanim na regionima (PSZR), prvi korak je segmentacija slike a potom se izdvajaju odlike niskog nivoa kao što su boja, tekstura, oblik ili prostorne odlike.
+Izdvajanje odlika niskog nivoa pretstavlja osnovu PSPS sistema. Izdvajanje se moze izvršiti sa cele slike ili sa nekog regiona slike. Predstavljanje slika na nivou regiona je sličnije ljudskom sistemu za opažanje i samim tim više PSPS sitema koristi taj pristup. Da bi se izvršila pretraga slika zasnovanim na regionima (PSZR), prvi korak je segmentacija slike a potom se izdvajaju odlike niskog nivoa kao što su boja, tekstura, oblik ili prostorne odlike.
 
 \subsection{Segmentacija slike}
 Za segmentaciju slika postoji više algoritama, svaki ima svoje prednosti i mane. Neki od njih su:
@@ -65,7 +65,7 @@ Za segmentaciju slika postoji više algoritama, svaki ima svoje prednosti i mane
 \end{enumerate}
 
 \subsection{Odlike boja}
-Boja je jedna od najčešćih odlika koja se koristi za pretraživanje slika. Ona je definisana na jednom od više mogućih prostora boja. Neki od češće korišćenih prostori boja su RGB, LAB, LUV, HSV, YCrCb i HMMD. Neke odlike boja koje se koriste u PSZR su matrica kovarijanse boja, histogram boje, momenti boje, prosečna boja i dominantna boja. Odabir odlike boje uveliko zavisi od rezultata segmentacije. Na primer ukoliko segmentacijom dobijemo nehomogene regione, proseča boja nam neće puno pomoći u ovom slučaju.
+Boja je jedna od najčešćih odlika koja se koristi za pretraživanje slika. Ona je definisana na jednom od više mogućih prostora boja. Neki od češće korišćenih prostora boja su RGB, LAB, LUV, HSV, YCrCb i HMMD. Neke odlike boja koje se koriste u PSZR su matrica kovarijanse boja, histogram boje, momenti boje, prosečna boja i dominantna boja. Odabir odlike boje uveliko zavisi od rezultata segmentacije. Na primer ukoliko segmentacijom dobijemo nehomogene regione, proseča boja nam neće puno pomoći u ovom slučaju.
 
 \subsection{Odlike teksture}
 Tekstura nam daje bitne informacije za klasifikovanje slika. Neke češće koršćene odlika u PSPS sistemima su: spektralne odlike dobijene korišćenjen Gaborovim filtriranjem, statističke odlike kojima pripadaju 6 Tamurinih odlika i globalne odlike koje je predložio Liu et al?.
@@ -74,12 +74,12 @@ Tekstura nam daje bitne informacije za klasifikovanje slika. Neke češće korš
 Oblik nije toliko korišćen u PSZR sistemima kao boja i tekstura, obično je koristan u nekik domensko specifičnim slikama kao što su objekti koje je napravio čovek. Neke osnovne odlike su odnos visine i širine, zaobljenost, Furijeovi deskriptori i uzastopna granica.
 
 \subsection{Prostorne odlike}
-Prostorne odlike su korisne u klasivikaciji regiona. Na primer more i nebo imaju sličnu boju i teksturu, ali prostorno nebo se obično nalazi na vrhu slike dok je more obično na dnu slike. Lokacija se obično jednostavno definiše kao gore ili dole. Postoje i relativni prostorni odnosi kao što su levo/desno i iznad/ispod koji se definišu za neka dva objekta.
+Prostorne odlike su korisne u klasifikaciji regiona. Na primer more i nebo imaju sličnu boju i teksturu, ali prostorno nebo se obično nalazi na vrhu slike dok je more obično na dnu slike. Lokacija se obično jednostavno definiše kao gore ili dole. Postoje i relativni prostorni odnosi kao što su levo/desno i iznad/ispod koji se definišu za neka dva objekta.
 
 \subsection{Mere sličnosti}
 U PSZR sistemi sličnost se meri na dva nivoa. Prvi je nivo regiona koji meri sličnost 2 regiona na osnovu njihovih odlika niskog nivoa. Drugi je nivo slike koji meri sličnost 2 slike sa različitim brojem regiona. Većina istraživača koriste rastojanje Minkovskog. Ako su dva regiona predstavljena sa dva \textit{p} dimenziona vektora \textit{$(x_{1},x_{2},...,x_{p}), (y_{1},y_{2},...,y_{p})$}, redom. Onda se rastojanje Minkovskog definiše kao
 $$ d(X,Y) = (\sum_{i=1}^{p} {|x_{i}-y_{i}|}^{r})^{1/r} $$
-U slu;aju da je r=2 dobijamo Euklidsko rastojanje, a ako je r=1 dobijamo Menhetn rastojanje.
+U slučaju da je $r=2$ dobijamo Euklidsko rastojanje, a ako je $r=1$ dobijamo Menhetn rastojanje.
 
 \section{Interakcija korsnika}
 U PSPS sistemima, interakcija sa korisnicima je od krucijalnog značaja, jer fleksibilnost formulacije i modifikacije upita se može postići uključivanjem korisnika u proces prikupljanja. Korisnički interfejs u ovim sistemima se najčešće sastoji od formulacije upit i prezentacije rezultat.
